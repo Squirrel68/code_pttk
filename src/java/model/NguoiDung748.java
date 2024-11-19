@@ -9,5 +9,54 @@ package model;
  * @author Admin
  */
 public class NguoiDung748 {
+    private int ID;
+    private String loaiNguoiDung;
+    private String taiKhoan;
+    private String matKhau;
+    private String hoVaTen;
+
+    public NguoiDung748() {
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getLoaiNguoiDung() {
+        return loaiNguoiDung;
+    }
+
+    public void setLoaiNguoiDung(String loaiNguoiDung) {
+        this.loaiNguoiDung = loaiNguoiDung;
+    }
+
+    public String getTaiKhoan() {
+        return taiKhoan;
+    }
+
+    public void setTaiKhoan(String taiKhoan) {
+        this.taiKhoan = taiKhoan;
+    }
+
+    public String getMatKhau() {
+        return matKhau;
+    }
+
+    public void setMatKhau(String matKhau) {
+        this.matKhau = matKhau;
+    }
+
+    public String getHoVaTen() {
+        return hoVaTen;
+    }
+
+    public void setHoVaTen(String hoVaTen) {
+        this.hoVaTen = hoVaTen;
+    }
+    
     
 }

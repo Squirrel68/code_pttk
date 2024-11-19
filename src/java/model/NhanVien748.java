@@ -8,6 +8,18 @@ package model;
  *
  * @author Admin
  */
-public class NguoiDung_HoaDon748 {
+public class NhanVien748 extends NguoiDung748{
+    private String chucVu;
+
+    public NhanVien748() {
+    }
+
+    public String getChucVu() {
+        return chucVu;
+    }
+
+    public void setChucVu(String chucVu) {
+        this.chucVu = chucVu;
+    }
     
 }

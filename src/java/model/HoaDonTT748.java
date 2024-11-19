@@ -4,18 +4,10 @@
  */
 package model;
 
-import java.sql.Date;
-
 /**
  *
  * @author Admin
  */
-public class TKPhim748 extends Phim748 {
-    private int tongSoVe;
-    private float tongDoanhThu;
-    private Date ngayBD;
-     private Date ngayKT;
-   
-    
+public class HoaDonTT748 {
     
 }

@@ -12,37 +12,22 @@ import java.sql.Date;
  * @author Admin
  */
 public class HoaDon748 {
+    private int ID;
     private int tongSoVe;
     private float tongTien;
     private Date ngay;
     private String loaiHoaDon;
-    private NguoiDung_HoaDon748 khachHang;
-    private NguoiDung_HoaDon748 nhanVien;
+    private KhachHang748 khachHang;
 
-
-
-    public String getLoaiHoaDon() {
-        return loaiHoaDon;
+    public HoaDon748() {
     }
 
-    public void setLoaiHoaDon(String loaiHoaDon) {
-        this.loaiHoaDon = loaiHoaDon;
+    public int getID() {
+        return ID;
     }
 
-    public NguoiDung_HoaDon748 getKhachHang() {
-        return khachHang;
-    }
-
-    public void setKhachHang(NguoiDung_HoaDon748 khachHang) {
-        this.khachHang = khachHang;
-    }
-
-    public NguoiDung_HoaDon748 getNhanVien() {
-        return nhanVien;
-    }
-
-    public void setNhanVien(NguoiDung_HoaDon748 nhanVien) {
-        this.nhanVien = nhanVien;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public int getTongSoVe() {
@@ -69,8 +54,19 @@ public class HoaDon748 {
         this.ngay = ngay;
     }
 
-    public HoaDon748() {
+    public String getLoaiHoaDon() {
+        return loaiHoaDon;
     }
-    
-    
+
+    public void setLoaiHoaDon(String loaiHoaDon) {
+        this.loaiHoaDon = loaiHoaDon;
+    }
+
+    public KhachHang748 getKhachHang() {
+        return khachHang;
+    }
+
+    public void setKhachHang(KhachHang748 khachHang) {
+        this.khachHang = khachHang;
+    }
 }

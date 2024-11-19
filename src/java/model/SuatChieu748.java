@@ -4,10 +4,72 @@
  */
 package model;
 
+import java.sql.Date;
+
 /**
  *
  * @author Admin
  */
 public class SuatChieu748 {
+    private int id;
+    private String gioChieu;
+    private Date ngayChieu;
+    private String ghiChu;
+    private Phim748 phim;
+    private PhongChieu748 phongChieu;
+
+    public SuatChieu748() {
+    }
+
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getGioChieu() {
+        return gioChieu;
+    }
+
+    public void setGioChieu(String gioChieu) {
+        this.gioChieu = gioChieu;
+    }
+
+    public Date getNgayChieu() {
+        return ngayChieu;
+    }
+
+    public void setNgayChieu(Date ngayChieu) {
+        this.ngayChieu = ngayChieu;
+    }
+
+    public String getGhiChu() {
+        return ghiChu;
+    }
+
+    public void setGhiChu(String ghiChu) {
+        this.ghiChu = ghiChu;
+    }
+
+    public Phim748 getPhim() {
+        return phim;
+    }
+
+    public void setPhim(Phim748 phim) {
+        this.phim = phim;
+    }
+
+    public PhongChieu748 getPhongChieu() {
+        return phongChieu;
+    }
+
+    public void setPhongChieu(PhongChieu748 phongChieu) {
+        this.phongChieu = phongChieu;
+    }
+    
+    
     
 }

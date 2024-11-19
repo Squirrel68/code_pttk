@@ -8,6 +8,30 @@ package model;
  *
  * @author Admin
  */
-public class TKSuatChieu748 {
+public class TKSuatChieu748 extends SuatChieu748{
+    private int tongSoVe;
+    private float tongDoanhThu;
+
+    public TKSuatChieu748() {
+//        super();
+    }
+
+    public int getTongSoVe() {
+        return tongSoVe;
+    }
+
+    public void setTongSoVe(int tongSoVe) {
+        this.tongSoVe = tongSoVe;
+    }
+
+    public float getTongDoanhThu() {
+        return tongDoanhThu;
+    }
+
+    public void setTongDoanhThu(float tongDoanhThu) {
+        this.tongDoanhThu = tongDoanhThu;
+    }
+    
+    
     
 }

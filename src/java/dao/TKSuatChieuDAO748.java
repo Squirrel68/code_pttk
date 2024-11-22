@@ -11,6 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import model.HoaDon748;
+import model.Phim748;
+import model.PhongChieu748;
 import model.TKSuatChieu748;
 
 /**
@@ -23,52 +25,48 @@ public class TKSuatChieuDAO748 extends DAO748 {
         super();
     }
 
-    public ArrayList<TKSuatChieuDAO748> getDsTKPhim(Date nBD, Date nKT, int phimID) {
-        ArrayList<TKSuatChieu748> list = new ArrayList<>();
-        String sql = "SELECT \n"
-                + "    SuatChieu748.*,\n"
-                + "    COUNT(Ve748.ID) AS TongSoVe,\n"
-                + "    SUM(Ve748.giaVe) AS TongDoanhThu\n"
-                + "FROM \n"
-                + "    Phim748\n"
-                + "JOIN \n"
-                + "    SuatChieu748 ON Phim748.ID = SuatChieu748.Phim748ID\n"
-                + "JOIN \n"
-                + "    Ve748 ON SuatChieu748.ID = Ve748.SuatChieu748ID\n"
-                + "WHERE \n"
-                + "    SuatChieu748.ngayChieu BETWEEN ? AND ? \n" // sử dụng dấu hỏi cho tham số
-                + "    AND Phim748.ID = ? \n" // thêm điều kiện lọc theo ID phim
-                + "GROUP BY \n"
-                + "    SuatChieu748.ID\n"
-                + "ORDER BY \n"
-                + "    TongDoanhThu DESC;";
+    public ArrayList<TKSuatChieu748> getDsTKPhim(Date nBD, Date nKT, int phimID) {
+        ArrayList<TKSuatChieu748> listSC = new ArrayList<>();
+        String sql = "SELECT SuatChieu748.*, "
+                + "Phim748.tenPhim, "
+                + "COUNT(Ve748.ID) AS TongSoVe, "
+                + "SUM(Ve748.giaVe) AS TongDoanhThu "
+                + "FROM SuatChieu748 "
+                + "JOIN Ve748 ON SuatChieu748.ID = Ve748.SuatChieu748ID "
+                + "JOIN Phim748 ON SuatChieu748.Phim748ID = Phim748.ID "
+                + "WHERE SuatChieu748.Phim748ID = ? "
+                + "AND SuatChieu748.ngayChieu BETWEEN ? AND ? "
+                + "GROUP BY SuatChieu748.ID "
+                + "ORDER BY TongDoanhThu DESC";
 
         try (CallableStatement cs = con.prepareCall(sql)) {
-            cs.setDate(1, nBD);  // truyền tham số ngày bắt đầu
-            cs.setDate(2, nKT);  // truyền tham số ngày kết thúc
-            cs.setInt(3, phimID); // truyền tham số ID phim
+            cs.setInt(1, phimID);  // Truyền phimID
+            cs.setDate(2, nBD);     // Truyền ngày bắt đầu
+            cs.setDate(3, nKT);     // Truyền ngày kết thúc
             ResultSet rs = cs.executeQuery();
+
             while (rs.next()) {
                 TKSuatChieu748 tkSuatChieu = new TKSuatChieu748();
-//                        , rs.getString("theLoai"), rs.getFloat("thoiLuong")
-//                        rs.getString("moTa"));
-                tkSuatChieu.setTongSoVe( rs.getInt("TongSoVe"));
-                tkSuatChieu.setTongDoanhThu(rs.getFloat("TongDoanhThu"));
-                tkSuatChieu.setPhim(rs.getString("tenPhim"));
+                Phim748 phim = new Phim748();
+                PhongChieu748 phongChieu = new PhongChieu748();
 
-                
-                list.add(tkSuatChieu);
+                phongChieu.setID(rs.getInt("phongChieu748ID"));
+                phim.setTenPhim(rs.getString("tenPhim"));  // Gán tên phim cho đối tượng phim
+
+                tkSuatChieu.setTongSoVe(rs.getInt("TongSoVe"));
+                tkSuatChieu.setTongDoanhThu(rs.getFloat("TongDoanhThu"));
+                tkSuatChieu.setNgayChieu(rs.getDate("ngayChieu"));
+                tkSuatChieu.setGioChieu(rs.getString("gioChieu"));
+                tkSuatChieu.setPhim(phim);
+                tkSuatChieu.setPhongChieu(phongChieu);
+                tkSuatChieu.setID(rs.getInt("ID"));
+
+                listSC.add(tkSuatChieu);
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return list;
-    }
-
-    public static void main(String[] args) {
-        HoaDonDAO748 a = new HoaDonDAO748();
-        ArrayList<HoaDon748> list = a.getDsHoaDon();
-        System.out.println(list.get(0).getTongSoVe());
+        return listSC;
     }
 
 }

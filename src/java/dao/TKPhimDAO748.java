@@ -23,7 +23,7 @@ public class TKPhimDAO748 extends DAO748 {
     }
 
     public ArrayList<TKPhim748> getDsTKPhim(Date nBD, Date nKT) {
-        ArrayList<TKPhim748> list = new ArrayList<>();
+        ArrayList<TKPhim748> listPhim = new ArrayList<>();
         String sql = "SELECT \n"
                 + "    Phim748.*,\n"
                 + "    COUNT(Ve748.ID) AS TongSoVe,\n"
@@ -46,14 +46,19 @@ public class TKPhimDAO748 extends DAO748 {
             cs.setDate(2, nKT);  // truyền tham số ngày kết thúc
             ResultSet rs = cs.executeQuery();
             while (rs.next()) {
-                TKPhim748 hd = new TKPhim748( rs.getInt("ID"), rs.getInt("TongSoVe"), rs.getFloat("TongDoanhThu"),
-                        rs.getString("tenPhim"), rs.getString("theLoai"), rs.getFloat("thoiLuong"),
-                        rs.getString("moTa"));
-                list.add(hd);
+                TKPhim748 tkPhim = new TKPhim748();                 
+                tkPhim.setID(rs.getInt("ID"));
+                tkPhim.setTongSoVe(rs.getInt("TongSoVe"));
+                tkPhim.setTongDoanhThu(rs.getFloat("TongDoanhThu"));
+                tkPhim.setTenPhim(rs.getString("tenPhim"));
+                tkPhim.setTheLoai(rs.getString("theLoai"));
+                tkPhim.setThoiLuong(rs.getFloat("thoiLuong"));
+                tkPhim.setMoTa(rs.getString("moTa"));
+                listPhim.add(tkPhim);
             }
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return list;
+        return listPhim;
     }
 }

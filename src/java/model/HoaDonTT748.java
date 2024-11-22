@@ -8,6 +8,19 @@ package model;
  *
  * @author Admin
  */
-public class HoaDonTT748 {
+public class HoaDonTT748 extends HoaDon748{
+    private String trangThai;
+
+    public HoaDonTT748() {
+    }
+
+    public String getTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(String trangThai) {
+        this.trangThai = trangThai;
+    }
+    
     
 }

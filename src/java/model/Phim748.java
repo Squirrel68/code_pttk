@@ -9,29 +9,21 @@ package model;
  * @author Admin
  */
 public class Phim748 {
-    private int id;
+    private int ID;
     private String tenPhim;
     private String theLoai;
     private float thoiLuong;
     private String moTa;
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Phim748(int id, String tenPhim, String theLoai, float thoiLuong, String moTa) {
-        this.id = id;
-        this.tenPhim = tenPhim;
-        this.theLoai = theLoai;
-        this.thoiLuong = thoiLuong;
-        this.moTa = moTa;
-    }
 
     public Phim748() {
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getTenPhim() {

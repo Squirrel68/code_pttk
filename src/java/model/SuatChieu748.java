@@ -11,7 +11,7 @@ import java.sql.Date;
  * @author Admin
  */
 public class SuatChieu748 {
-    private int id;
+    private int ID;
     private String gioChieu;
     private Date ngayChieu;
     private String ghiChu;
@@ -21,14 +21,14 @@ public class SuatChieu748 {
     public SuatChieu748() {
     }
 
-    
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setID(int ID) {
+        this.ID = ID;
     }
+
 
     public String getGioChieu() {
         return gioChieu;

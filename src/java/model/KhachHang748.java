@@ -8,6 +8,26 @@ package model;
  *
  * @author Admin
  */
-public class KhachHang748 {
-    
+public class KhachHang748 extends NguoiDung748{
+    private int diem;
+    private String maTheTV;
+
+    public KhachHang748() {
+    }
+
+    public int getDiem() {
+        return diem;
+    }
+
+    public void setDiem(int diem) {
+        this.diem = diem;
+    }
+
+    public String getMaTheTV() {
+        return maTheTV;
+    }
+
+    public void setMaTheTV(String maTheTV) {
+        this.maTheTV = maTheTV;
+    }
 }

@@ -13,7 +13,6 @@ public class TKSuatChieu748 extends SuatChieu748{
     private float tongDoanhThu;
 
     public TKSuatChieu748() {
-//        super();
     }
 
     public int getTongSoVe() {

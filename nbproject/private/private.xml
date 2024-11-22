@@ -5,9 +5,17 @@
         <group>
             <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/dao/TKPhimDAO748.java</file>
             <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/dao/TKSuatChieuDAO748.java</file>
-            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/SuatChieu748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/HoaDon748.java</file>
             <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/Phim748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/KhachHang748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/TKPhim748.java</file>
             <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/TKSuatChieu748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/Ghe748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/HoaDonTT748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/NhanVien748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/PhongChieu748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/NguoiDung748.java</file>
+            <file>file:/D:/Document/Uni/Ki_4.1/PTTKHT/codeDe16_1/src/java/model/HoaDonTQ748.java</file>
         </group>
     </open-files>
 </project-private>

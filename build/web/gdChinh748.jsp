@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
+<%-- 
+    Document   : gdChinh748.jsp
+    Created on : Nov 23, 2024, 11:59:57 AM
+    Author     : Admin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +48,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <body>
     <h1>Quản lý rạp chiếu phim - Cineman</h1>
     <button onclick="window.location.href='gdChinhQL748.jsp'">Đi đến Trang Quản lý Chính</button>
+    <button onclick="window.location.href='gdDangKy748.jsp'">Đi đến Trang Đăng ký thành viên</button>
+    
 </body>
 </html>
-

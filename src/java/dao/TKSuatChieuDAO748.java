@@ -25,7 +25,7 @@ public class TKSuatChieuDAO748 extends DAO748 {
         super();
     }
 
-    public ArrayList<TKSuatChieu748> getDsTKPhim(Date nBD, Date nKT, int phimID) {
+    public ArrayList<TKSuatChieu748> getDsTKSChieu(Date nBD, Date nKT, int phimID) {
         ArrayList<TKSuatChieu748> listSC = new ArrayList<>();
         String sql = "SELECT SuatChieu748.*, "
                 + "Phim748.tenPhim, "

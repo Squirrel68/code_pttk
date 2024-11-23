@@ -14,6 +14,26 @@ public class NguoiDung748 {
     private String taiKhoan;
     private String matKhau;
     private String hoVaTen;
+    private String sdt;
+    private String email;
+
+    public String getSdt() {
+        return sdt;
+    }
+
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
 
     public NguoiDung748() {
     }

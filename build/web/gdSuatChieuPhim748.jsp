@@ -77,12 +77,15 @@
             Date nKT = Date.valueOf(nKTParam);
 
             TKSuatChieuDAO748 dao = new TKSuatChieuDAO748();
-            ArrayList<TKSuatChieu748> list = dao.getDsTKPhim(nBD, nKT, phimID);
+            ArrayList<TKSuatChieu748> list = dao.getDsTKSChieu(nBD, nKT, phimID);
 
             if (!list.isEmpty()) {
     %>
                 <button onclick="history.back()">Back</button>
                 <h1>Thống kê suất chiếu của phim <%= list.get(0).getPhim().getTenPhim() %></h1>
+                <h1>Từ ngày: <%= nBD %></h1>
+                <h1>Đến ngày: <%= nKT %> </h1>
+                
 
                 <!-- Hiển thị bảng thống kê -->
                 <table>

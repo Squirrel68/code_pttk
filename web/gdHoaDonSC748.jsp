@@ -64,6 +64,8 @@
 <body>
     <button onclick="history.back()">Back</button>
     <h1>Danh sách hóa đơn cho suất chiếu ID: <%= request.getParameter("id") %></h1>
+    <h1>Từ ngày: <%= request.getParameter("nBD") %></h1>
+    <h1>Đến ngày: <%= request.getParameter("nKT") %> </h1>
 
     <%
         // Lấy thông tin từ query parameters
